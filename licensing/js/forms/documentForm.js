@@ -58,25 +58,25 @@ $(function(){
 
     $("#parentDocumentID")
 	.mouseover(function(){
-	    if($.browser.msie){
-		    var cssObj = {
-		      'width' : 'auto',
-		      'position' : 'absolute',
-		      'top' : '120px'
-		    }
-
-		    $(this).css(cssObj);
-	   }
+	    //if($.browser.msie){
+	//	    var cssObj = {
+	//	      'width' : 'auto',
+	//	      'position' : 'absolute',
+	//	      'top' : '120px'
+	//	    }
+       
+        //    $(this).css(cssObj);
+	//   }
 	})
 
 	.change(function(){
-	    if($.browser.msie){
-		    var cssObj = {
-		      'width' : '185px',
-		      'position' : ''
-		    }
-		$(this).css(cssObj);
-	    }
+	  //  if($.browser.msie){
+	//	    var cssObj = {
+	//	      'width' : '185px',
+	//	      'position' : ''
+	//	    }
+       //	$(this).css(cssObj);
+	//    }
 	})
 
 
