@@ -60,7 +60,8 @@ $target = getTarget();
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="../js/plugins/Gettext.js"></script>
 <script type="text/javascript" src="../js/plugins/translate.js"></script>
-<script type="text/javascript" src="../js/plugins/jquery-1.8.0.js"></script>
+<!-- <script type="text/javascript" src="../js/plugins/jquery-1.8.0.js"></script> -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script type="text/javascript" src="js/plugins/thickbox.js"></script>
 <script type="text/javascript" src="../js/plugins/jquery.autocomplete.js"></script>
 <script type="text/javascript" src="../js/plugins/jquery.tooltip.js"></script>
