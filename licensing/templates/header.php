@@ -62,6 +62,8 @@ $target = getTarget();
 <script type="text/javascript" src="../js/plugins/translate.js"></script>
 <!-- <script type="text/javascript" src="../js/plugins/jquery-1.8.0.js"></script> -->
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script  rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/plugins/thickbox.js"></script>
 <script type="text/javascript" src="../js/plugins/jquery.autocomplete.js"></script>
 <script type="text/javascript" src="../js/plugins/jquery.tooltip.js"></script>
