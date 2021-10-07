@@ -1034,7 +1034,8 @@ switch ($_GET['action']) {
 
 
 		if (($user->canEdit()) && ($displayArchiveInd != "")){
-			echo "<a href='ajax_forms.php?action=getUploadDocument&licenseID=" . $licenseID . "&height=280&width=310&modal=true' class='thickbox' id='uploadDocument'>"._("upload new document")."</a>";
+			// echo "<a href='ajax_forms.php?action=getUploadDocument&licenseID=" . $licenseID . "&height=280&width=310&modal=true' class='thickbox' id='uploadDocument'>"._("upload new document")."</a>";
+			echo "<a href='#' id='uploadDocument' onclick='javascript:myDialog(\"ajax_forms.php?action=getUploadDocument&licenseID=" . $licenseID ."\",280,350)'>"._("upload new document")."</a>";
 		}
 
 

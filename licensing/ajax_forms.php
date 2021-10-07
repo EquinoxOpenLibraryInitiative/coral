@@ -268,7 +268,8 @@ switch ($_GET['action']) {
 
 		<tr style="vertical-align:middle;">
 		<td style="width:60px;"><input type='button' value='<?php echo _("submit");?>' name='submitDocument' id='submitDocument' class='submit-button'></td>
-		<td><input type='button' value='<?php echo _("cancel");?>' onclick="tb_remove()" class='cancel-button'></td>
+	<!--	<td><input type='button' value='<?php echo _("cancel");?>' onclick="tb_remove()" class='cancel-button'></td> -->
+		 <td><input type='button' value='<?php echo _("cancel");?>' onclick="myCloseDialog('#uploadDocument')" class='cancel-button'></td>
 		</tr>
 		</table>
 		</div>
