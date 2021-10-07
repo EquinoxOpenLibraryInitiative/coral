@@ -501,7 +501,7 @@ switch ($_GET['action']) {
 				</tr>
 				<tr>
 			<!--	<td colspan='2'><p><a href='#' onclick='window.parent.tb_remove(); window.parent.location=("license.php?licenseID=<?php echo $licenseID; ?>"); return false'><?php echo _("Continue");?></a></td> -->
-				<td colspan='2'><p><a href='#' onclick='myCloseDialog("#newlicnese")'; window.parent.location=("license.php?licenseID=<?php echo $licenseID; ?>"); return false'><?php echo _("Continue");?></a></td>
+			-	<td colspan='2'><p><a href='#' onclick='myCloseDialog("#newlicnese"); window.parent.location=("license.php?licenseID=<?php echo $licenseID; ?>"); return false'><?php echo _("Continue");?></a></td>
 				</tr>
 
 				</table>

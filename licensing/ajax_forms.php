@@ -270,7 +270,7 @@ switch ($_GET['action']) {
 
 		<tr style="vertical-align:middle;">
 <!--		<td style="width:60px;"><input type='button' value='<?php echo _("submit");?>' name='submitDocument' id='submitDocument' class='submit-button'></td> -->
-		<td style="width:60px;"><input type='button' value='<?php echo _("submit");?>' name='submitDocument' id='submitDocument' onclick='myDialogPOST("ajax_processing.php?action=submitDocument")' class='submit-button'></td> 
+		<td style="width:60px;"><input type='button' value='<?php echo _("submit");?>' name='submitDocument' id='submitDocument' onclick='javascript:myDialogPOST("ajax_processing.php?action=submitDocument")' class='submit-button'></td> 
 	<!--	<td><input type='button' value='<?php echo _("cancel");?>' onclick="tb_remove()" class='cancel-button'></td> -->
 		 <td><input type='button' value='<?php echo _("cancel");?>' onclick="myCloseDialog('#uploadDocument')" class='cancel-button'></td>
 		</tr>
@@ -641,7 +641,8 @@ switch ($_GET['action']) {
 
 		<tr style="vertical-align:middle;">
 		<td style="width:60px;"><input type='button' value='<?php echo _("submit");?>' name='submitExpression' id='submitExpression' class='submit-button'></td>
-		<td><input type='button' value='<?php echo _("cancel");?>' onclick="tb_remove()" class='cancel-button'></td>
+	<!--	<td><input type='button' value='<?php echo _("cancel");?>' onclick="tb_remove()" class='cancel-button'></td> -->
+		<td><input type='button' value='<?php echo _("cancel");?>' onclick="myCloseDialog('#submitExpression')" class='cancel-button'></td>	
 		</tr>
 		</table>
 		</div>
@@ -1010,7 +1011,8 @@ switch ($_GET['action']) {
 
 		<tr>
 		<td style="width:60px;"><input type='button' value='<?php echo $update; ?>' onclick='javascript:window.parent.submitExpressionType();' id='update-expression-type' class='submit-button'></td>
-		<td><input type='button' value='<?php echo _("Close");?>' onclick="window.parent.tb_remove(); return false;" id='cancel-expression-type' class='cancel-button'></td>
+	<!--	<td><input type='button' value='<?php echo _("Close");?>' onclick="window.parent.tb_remove(); return false;" id='cancel-expression-type' class='cancel-button'></td> -->
+	        <td><input type='button' value='<?php echo _("Close");?>' onclick="myCloseDialog('#newExpressionTypeForm')"; return false;" id='cancel-expression-type' class='cancel-button'>
 		</tr>
 		</table>
 		</div>
