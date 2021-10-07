@@ -111,7 +111,8 @@ switch ($_GET['action']) {
 
 		<tr style="vertical-align:middle;">
 		<td style="width:60px;"><input type='button' value='<?php echo _("submit");?>' name='submitLicense' id ='submitLicense' class='submit-button'></td>
-		<td><input type='button' value='<?php echo _("cancel");?>' onclick="tb_remove()" class='cancel-button'></td>
+	<!--	<td><input type='button' value='<?php echo _("cancel");?>' onclick="tb_remove()" class='cancel-button'></td> -->
+		<td><input type='button' value='<?php echo _("cancel");?>' onclick="myCloseDialog('#licenseForm')" class='cancel-button'></td>
 		</tr>
 		</table>
 
@@ -156,7 +157,8 @@ switch ($_GET['action']) {
 
 		?>
 		<div id='div_uploadDoc'>
-		<form id="uploadDoc" action="ajax_processing.php?action=submitDocument" method="POST" enctype="multipart/form-data">
+<!--		<form id="uploadDoc" action="ajax_processing.php?action=submitDocument" method="POST" enctype="multipart/form-data"> -->
+		<form id="uploadDoc" enctype="multipart/form-data">
 		<input type='hidden' id='licenseID' name='licenseID' value='<?php echo $licenseID; ?>'>
 		<input type='hidden' id='documentID' name='documentID' value='<?php echo $documentID; ?>'>
 		<table class="thickboxTable" style="width:310px;">
@@ -267,7 +269,8 @@ switch ($_GET['action']) {
 		<?php } ?>
 
 		<tr style="vertical-align:middle;">
-		<td style="width:60px;"><input type='button' value='<?php echo _("submit");?>' name='submitDocument' id='submitDocument' class='submit-button'></td>
+<!--		<td style="width:60px;"><input type='button' value='<?php echo _("submit");?>' name='submitDocument' id='submitDocument' class='submit-button'></td> -->
+		<td style="width:60px;"><input type='button' value='<?php echo _("submit");?>' name='submitDocument' id='submitDocument' onclick='myDialogPOST("ajax_processing.php?action=submitDocument")' class='submit-button'></td> 
 	<!--	<td><input type='button' value='<?php echo _("cancel");?>' onclick="tb_remove()" class='cancel-button'></td> -->
 		 <td><input type='button' value='<?php echo _("cancel");?>' onclick="myCloseDialog('#uploadDocument')" class='cancel-button'></td>
 		</tr>

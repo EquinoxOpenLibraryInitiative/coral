@@ -62,9 +62,9 @@ $target = getTarget();
 <script type="text/javascript" src="../js/plugins/translate.js"></script>
 <!-- <script type="text/javascript" src="../js/plugins/jquery-1.8.0.js"></script> -->
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script  rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"></script>
+<link  rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-<script type="text/javascript" src="js/plugins/thickbox.js"></script>
+<!-- script type="text/javascript" src="js/plugins/thickbox.js"></script>  -->
 <script type="text/javascript" src="../js/plugins/jquery.autocomplete.js"></script>
 <script type="text/javascript" src="../js/plugins/jquery.tooltip.js"></script>
 <script type="text/javascript" src="../js/plugins/datejs-patched-for-i18n.js"></script>
@@ -153,8 +153,9 @@ if ($user->isAdmin()) { ?>
         </div>
     </a>
 
-    <a href='ajax_forms.php?action=getLicenseForm&height=265&width=260&modal=true&newLicenseID=' class='thickbox' id='newLicense'>
-        <div class="main-menu-link">
+   <!--  <a href='ajax_forms.php?action=getLicenseForm&height=265&width=260&modal=true&newLicenseID=' class='thickbox' id='newLicense'> -->
+   <a href='#' onclick='javascript:myDialog("ajax_forms.php?action=getLicenseForm&newlicenseID=",265,280)'  class='thickbox' id='newLicense'>
+	<div class="main-menu-link">
             <img src="images/menu/icon-plus-square.png" />
             <span><?php echo _("New License");?></span>
         </div>

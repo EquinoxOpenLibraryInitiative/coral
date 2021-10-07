@@ -873,8 +873,10 @@ switch ($_GET['action']) {
 				echo "</td>";
 
 				if ($user->canEdit()){
-					echo "<td class='icon'$classAdd><a href='ajax_forms.php?action=getUploadDocument&height=295&width=317&modal=true&licenseID=" . $licenseID . "&documentID=" . $document->documentID . "' class='thickbox' id='editDocument'><img id='Edit'  src='images/edit.gif' title= '"._("Edit")."' /></a> &nbsp &nbsp <a href='javascript:deleteDocument(\"" . $document->documentID . "\");'><img id='Remove' src='images/cross.gif' title= '"._("Remove")."' /></a>";
+			//		echo "<td class='icon'$classAdd><a href='ajax_forms.php?action=getUploadDocument&height=295&width=317&modal=true&licenseID=" . $licenseID . "&documentID=" . $document->documentID . "' class='thickbox' id='editDocument'><img id='Edit'  src='images/edit.gif' title= '"._("Edit")."' /></a> &nbsp &nbsp <a href='javascript:deleteDocument(\"" . $document->documentID . "\");'><img id='Remove' src='images/cross.gif' title= '"._("Remove")."' /></a>";
+					echo "<td class='icon'$classAdd><a href='#'  onclick='javascript:myDialog(\"ajax_forms.php?action=getUploadDocument&licenseID=" . $licenseID . "&documentID=" . $document->documentID . "\", 295,350)' class='thickbox' id='editDocument'><img id='Edit'  src='images/edit.gif' title= '"._("Edit")."' /></a> &nbsp &nbsp <a href='javascript:deleteDocument(\"" . $document->documentID . "\");'><img id='Remove' src='images/cross.gif' title= '"._("Remove")."' /></a>";
 					echo "<br />" . $displayExpirationDate . "</td>";
+
 				}
 				echo "</tr>";
 
@@ -1034,7 +1036,7 @@ switch ($_GET['action']) {
 
 
 		if (($user->canEdit()) && ($displayArchiveInd != "")){
-			// echo "<a href='ajax_forms.php?action=getUploadDocument&licenseID=" . $licenseID . "&height=280&width=310&modal=true' class='thickbox' id='uploadDocument'>"._("upload new document")."</a>";
+		//	echo "<a href='ajax_forms.php?action=getUploadDocument&licenseID=" . $licenseID . "&height=280&width=310&modal=true' class='thickbox' id='uploadDocument'>"._("upload new document")."</a>";
 			echo "<a href='#' id='uploadDocument' onclick='javascript:myDialog(\"ajax_forms.php?action=getUploadDocument&licenseID=" . $licenseID ."\",280,350)'>"._("upload new document")."</a>";
 		}
 
