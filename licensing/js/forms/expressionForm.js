@@ -63,7 +63,6 @@ $("#submitExpression").click(function () {
 				$("#span_errors").html(html);
 			}else{
 				//window.parent.tb_remove();
-				 $('.ui-dialog-content').dialog('close');	
 				window.parent.updateExpressions();
 				window.parent.updateDocuments();
 				window.parent.updateArchivedDocuments();

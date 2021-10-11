@@ -249,10 +249,12 @@ function myCloseDialog(formName){
         //$(this).dialog('close')
 //$(this).closest('.ui-dialog-content').dialog('close');
 //      $(formName).dialog( "close" )
-     $('.ui-dialog-content').dialog('close');
+     $('.ui-dialog-content').dialog('destroy');
 }
 
 function myDialogPOST(ajaxcall){
+     return setTimeout(function(){$('.ui-dialog-content').dialog('destroy')},0);
+/*
         $.ajax({
               type: "POST",
                url: ajaxcall,
@@ -262,8 +264,11 @@ function myDialogPOST(ajaxcall){
                 //dataType: "json",
                 success: function (r) {
                     //$("#imgLoader").css("visibility", "hidden");
-                    $(".ui-dialog-content").dialog("close");
+                    $(".ui-dialog-content").dialog("destroy");
                 }
         });
+ 
+*/
+
 }
 

@@ -168,7 +168,6 @@ function doSubmitDocument(){
 				$("#span_errors").html(html);
 			}else{
 		//		window.parent.tb_remove();
-				 $('.ui-dialog-content').dialog('close');
 				window.parent.updateDocuments();
 				window.parent.updateArchivedDocuments();
 				return false;

@@ -157,8 +157,8 @@ switch ($_GET['action']) {
 
 		?>
 		<div id='div_uploadDoc'>
-<!--		<form id="uploadDoc" action="ajax_processing.php?action=submitDocument" method="POST" enctype="multipart/form-data"> -->
-		<form id="uploadDoc" enctype="multipart/form-data">
+		<form id="uploadDoc" action="ajax_processing.php?action=submitDocument" method="POST" enctype="multipart/form-data">
+		<!-- <form id="uploadDoc" enctype="multipart/form-data"> -->
 		<input type='hidden' id='licenseID' name='licenseID' value='<?php echo $licenseID; ?>'>
 		<input type='hidden' id='documentID' name='documentID' value='<?php echo $documentID; ?>'>
 		<table class="thickboxTable" style="width:310px;">
@@ -269,8 +269,8 @@ switch ($_GET['action']) {
 		<?php } ?>
 
 		<tr style="vertical-align:middle;">
-<!--		<td style="width:60px;"><input type='button' value='<?php echo _("submit");?>' name='submitDocument' id='submitDocument' class='submit-button'></td> -->
-		<td style="width:60px;"><input type='button' value='<?php echo _("submit");?>' name='submitDocument' id='submitDocument' onclick='javascript:myDialogPOST("ajax_processing.php?action=submitDocument")' class='submit-button'></td> 
+ 	<td style="width:60px;"><input type='button' value='<?php echo _("submit");?>' name='submitDocument' onclick='myDialogPOST("")' id='submitDocument' class='submit-button'></td>
+	<!--	<td style="width:60px;"><input type='button' value='<?php echo _("submit");?>' name='submitDocument' id='submitDocument' onclick='javascript:myDialogPOST("ajax_processing.php?action=submitDocument")' class='submit-button'></td>  -->
 	<!--	<td><input type='button' value='<?php echo _("cancel");?>' onclick="tb_remove()" class='cancel-button'></td> -->
 		 <td><input type='button' value='<?php echo _("cancel");?>' onclick="myCloseDialog('#uploadDocument')" class='cancel-button'></td>
 		</tr>
@@ -370,8 +370,8 @@ switch ($_GET['action']) {
 		</tr>
 
 		<tr>
-		<td style="width:60px;"><input type='button' value='<?php echo _("submit");?>' name='submitSFX' id='submitSFX' class='submit-button'></td>
-		<td><input type='button' value='<?php echo _("cancel");?>' onclick="window.parent.tb_remove()" class='cancel-button'></td>
+		<td style="width:60px;"><input type='button' value='<?php echo _("submit");?>' name='submitSFX' onclick='myDialogPOST("")' id='submitSFX' class='submit-button'></td>
+		<td><input type='button' value='<?php echo _("cancel");?>' onclick='javascript:myCloseDialog("")' class='cancel-button'></td>
 		</tr>
 
 		</table>
@@ -491,7 +491,7 @@ switch ($_GET['action']) {
 		</table>
 		</td>
 		</tr>
-		<tr><td style='text-align:center;width:100%;'><br /><br /><a href='#' onclick='window.parent.tb_remove();  window.parent.updateDocuments();  window.parent.updateArchivedDocuments(); return false' class='cancel-button'><?php echo _("Close");?></a></td></tr>
+		<tr><td style='text-align:center;width:100%;'><br /><br /><a href='#' onclick='myCloseDialog("");  window.parent.updateDocuments();  window.parent.updateArchivedDocuments(); return false' class='cancel-button'><?php echo _("Close");?></a></td></tr>
 		</table>
 		<input type="hidden" id='documentID' name='documentID' value='<?php echo $documentID; ?>'>
 
@@ -640,7 +640,7 @@ switch ($_GET['action']) {
 		</tr>
 
 		<tr style="vertical-align:middle;">
-		<td style="width:60px;"><input type='button' value='<?php echo _("submit");?>' name='submitExpression' id='submitExpression' class='submit-button'></td>
+		<td style="width:60px;"><input type='button' value='<?php echo _("submit");?>' name='submitExpression' onclick='myDialogPOST("")' id='submitExpression' class='submit-button'></td>
 	<!--	<td><input type='button' value='<?php echo _("cancel");?>' onclick="tb_remove()" class='cancel-button'></td> -->
 		<td><input type='button' value='<?php echo _("cancel");?>' onclick="myCloseDialog('#submitExpression')" class='cancel-button'></td>	
 		</tr>
@@ -755,7 +755,9 @@ switch ($_GET['action']) {
 		</table>
 		</td>
 		</tr>
-		<tr><td style='width:100%;'><br /><br /><a href='#' onclick='window.parent.tb_remove();  window.parent.<?php if ($_GET['org'] == "compare") { echo "updateSearch()"; } else { echo "updateExpressions()"; } ?>; return false' class='cancel-button'><?php echo _("Close");?></a></td></tr>
+<!--		<tr><td style='width:100%;'><br /><br /><a href='#' onclick='myCloseDialog('');  window.parent.<?php if ($_GET['org'] == "compare") { echo "updateSearch()"; } else { echo "updateExpressions()"; } ?>; return false' class='cancel-button'><?php echo _("Close");?></a></td></tr> -->
+                <tr><td style='width:100%;'><br /><br /><a href='#' onclick='myCloseDialog("");  window.parent.<?php if ($_GET['org'] == "compare") { echo "updateSearch()"; } else { echo "updateExpressions()"; } ?>; return false' class='cancel-button'><?php echo _("Close");?></a></td></tr>
+
 		</table>
 		<input type="hidden" id='documentID' name='documentID' value='<?php echo $documentID; ?>'>
 		<input type="hidden" id='org' name='org' value='<?php echo $_GET['org']; ?>'>
@@ -833,8 +835,8 @@ switch ($_GET['action']) {
 		</tr>
 
 		<tr style="vertical-align:middle;">
-		<td style="width:60px;"><input type='button' value='<?php echo _("submit");?>' name='submitAttachment' id='submitAttachment'class='submit-button'></td>
-		<td><input type='button' value='<?php echo _("cancel");?>' onclick="tb_remove();window.parent.updateAttachments();" class='cancel-button'></td>
+		<td style="width:60px;"><input type='button' value='<?php echo _("submit");?>' name='submitAttachment' onclick='javascript:myDialogPOST("")' id='submitAttachment'class='submit-button'></td>
+		<td><input type='button' value='<?php echo _("cancel");?>' onclick="javascript:myCloseDialog('');window.parent.updateAttachments();" class='cancel-button'></td>
 		</tr>
 		</table>
 
@@ -867,12 +869,12 @@ switch ($_GET['action']) {
 		<tr>
 		<td>
 		<?php
-		echo "<input type='text' id='updateVal' name='updateVal' value='" . $instance->shortName . "' style='width:190px;'/></td><td><a href='javascript:updateData(\"" . $className . "\", \"" . $updateID . "\");' id='updateButton' class='submit-button'>"._("Edit")."</a>";
+		echo "<input type='text' id='updateVal' name='updateVal' value='" . $instance->shortName . "' style='width:190px;'/></td><td><a href='javascript:updateData(\"" . $className . "\", \"" . $updateID . "\");' onclick='myDialogPOST(\"\")' id='updateButton' class='submit-button'>"._("Edit")."</a>";
 		?>
 
 
 		</td>
-		<td><a href='#' onclick='window.parent.tb_remove(); return false' class='cancel-button'><?php echo _("Close");?></a></td>
+		<td><a href='#' onclick='myCloseDialog(""); return false' class='cancel-button'><?php echo _("Close");?></a></td>
 		</tr>
 		</table>
 		</div>
@@ -964,8 +966,8 @@ switch ($_GET['action']) {
 		<?php } else { echo "<input type='hidden' id='emailAddressForTermsTool' name='emailAddressForTermsTool' value='' /><br />"; }?>
 
 		<tr style="vertical-align:middle;">
-		<td colspan='2' style="width:60px;"><input type='button' value='<?php echo $update; ?>' onclick='javascript:window.parent.submitUserData("<?php echo $loginID; ?>");' class='submit-button'></td>
-		<td><input type='button' value="<?php echo _("Close");?>" onclick="window.parent.tb_remove(); return false" id='update-user-cancel' class='cancel-button'></td>
+		<td colspan='2' style="width:60px;"><input type='button' value='<?php echo $update; ?>' onclick='javascript:window.parent.submitUserData("<?php echo $loginID; ?>");javascript:myDialogPOST("");' class='submit-button'></td>
+		<td><input type='button' value="<?php echo _("Close");?>" onclick="myCloseDialog('')"; return false" id='update-user-cancel' class='cancel-button'></td>
 		</tr>
 
 		</table>
@@ -1010,8 +1012,8 @@ switch ($_GET['action']) {
 
 
 		<tr>
-		<td style="width:60px;"><input type='button' value='<?php echo $update; ?>' onclick='javascript:window.parent.submitExpressionType();' id='update-expression-type' class='submit-button'></td>
-	<!--	<td><input type='button' value='<?php echo _("Close");?>' onclick="window.parent.tb_remove(); return false;" id='cancel-expression-type' class='cancel-button'></td> -->
+		<td style="width:60px;"><input type='button' value='<?php echo $update; ?>' onclick='javascript:window.parent.submitExpressionType();myDialogPOST("")' id='update-expression-type' class='submit-button'></td>
+	<!--	<td><input type='button' value='<?php echo _("Close");?>' onclick="myCloseDialog(''); return false;" id='cancel-expression-type' class='cancel-button'></td> -->
 	        <td><input type='button' value='<?php echo _("Close");?>' onclick="myCloseDialog('#newExpressionTypeForm')"; return false;" id='cancel-expression-type' class='cancel-button'>
 		</tr>
 		</table>
@@ -1119,8 +1121,8 @@ switch ($_GET['action']) {
 
 
 		<tr>
-		<td style="width:60px;"><input type='button' value='<?php echo $update; ?>' onclick='javascript:window.parent.submitCalendarSettings();' class='submit-button'></td>
-		<td><input type='button' value='<?php echo _("Close");?>' onclick="window.parent.tb_remove(); return false" class='cancel-button'></td>
+		<td style="width:60px;"><input type='button' value='<?php echo $update; ?>' onclick='javascript:window.parent.submitCalendarSettings();myDialogPOST("")' class='submit-button'></td>
+		<td><input type='button' value='<?php echo _("Close");?>' onclick="myCloseDialog(''); return false" class='cancel-button'></td>
 		</tr>
 		</table>
 		</div>
@@ -1173,8 +1175,8 @@ switch ($_GET['action']) {
             <tr><td><label for='shortName'><b><?php echo _("Qualifier");?></b></label></td><td><input type='text' id='shortName' name='shortName' value='<?php if (isset($qualifier)) echo $qualifier->shortName; ?>' style='width:150px;'/></td></tr>
 
 		<tr>
-		<td style="width:60px;"><input type='button' value='<?php echo $update; ?>' onclick='javascript:window.parent.submitQualifier();' id='submitQualifier' class='submit-button'></td>
-		<td><input type='button' value='<?php echo _("Close");?>' onclick="window.parent.tb_remove(); return false" class='cancel-button'></td>
+		<td style="width:60px;"><input type='button' value='<?php echo $update; ?>' onclick='javascript:window.parent.submitQualifier();myDialogPOST("")' id='submitQualifier' class='submit-button'></td>
+		<td><input type='button' value='<?php echo _("Close");?>' onclick="myCloseDialog(''); return false" class='cancel-button'></td>
 		</tr>
 		</table>
 		</div>
@@ -1235,8 +1237,8 @@ switch ($_GET['action']) {
                     <td><input type="text" name="sid" id="termsToolSID" value="<?php echo $config->terms->sid; ?>"></td>
                 </tr>
                 <tr>
-                    <td style="width:60px;"><input type="button" value="<?php echo _('Save'); ?>" onclick='javascript:window.parent.submitTermsToolSettings();' id="submitTermsToolSettings" class="submit-button"></td>
-                    <td><input type="button" value="<?php echo _("cancel");?>" onclick="window.parent.tb_remove(); return false" class="cancel-button"></td>
+                    <td style="width:60px;"><input type="button" value="<?php echo _('Save'); ?>" onclick='javascript:window.parent.submitTermsToolSettings();myDialogPOST("")' id="submitTermsToolSettings" class="submit-button"></td>
+                    <td><input type="button" value="<?php echo _("cancel");?>" onclick="myCloseDialog(''); return false" class="cancel-button"></td>
                 </tr>
             </table>
         </div>
