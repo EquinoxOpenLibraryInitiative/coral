@@ -491,7 +491,7 @@ switch ($_GET['action']) {
 		</table>
 		</td>
 		</tr>
-		<tr><td style='text-align:center;width:100%;'><br /><br /><a href='#' onclick='myCloseDialog("");  window.parent.updateDocuments();  window.parent.updateArchivedDocuments(); return false' class='cancel-button'><?php echo _("Close");?></a></td></tr>
+		<tr><td style='text-align:center;width:100%;'><br /><br /><a href='javascript:void(0)' onclick='myCloseDialog("");  window.parent.updateDocuments();  window.parent.updateArchivedDocuments(); return false' class='cancel-button'><?php echo _("Close");?></a></td></tr>
 		</table>
 		<input type="hidden" id='documentID' name='documentID' value='<?php echo $documentID; ?>'>
 
@@ -755,8 +755,8 @@ switch ($_GET['action']) {
 		</table>
 		</td>
 		</tr>
-<!--		<tr><td style='width:100%;'><br /><br /><a href='#' onclick='myCloseDialog('');  window.parent.<?php if ($_GET['org'] == "compare") { echo "updateSearch()"; } else { echo "updateExpressions()"; } ?>; return false' class='cancel-button'><?php echo _("Close");?></a></td></tr> -->
-                <tr><td style='width:100%;'><br /><br /><a href='#' onclick='myCloseDialog("");  window.parent.<?php if ($_GET['org'] == "compare") { echo "updateSearch()"; } else { echo "updateExpressions()"; } ?>; return false' class='cancel-button'><?php echo _("Close");?></a></td></tr>
+<!--		<tr><td style='width:100%;'><br /><br /><a href='javascript:void(0)' onclick='myCloseDialog('');  window.parent.<?php if ($_GET['org'] == "compare") { echo "updateSearch()"; } else { echo "updateExpressions()"; } ?>; return false' class='cancel-button'><?php echo _("Close");?></a></td></tr> -->
+                <tr><td style='width:100%;'><br /><br /><a href='javascript:void(0)' onclick='myCloseDialog("");  window.parent.<?php if ($_GET['org'] == "compare") { echo "updateSearch()"; } else { echo "updateExpressions()"; } ?>; return false' class='cancel-button'><?php echo _("Close");?></a></td></tr>
 
 		</table>
 		<input type="hidden" id='documentID' name='documentID' value='<?php echo $documentID; ?>'>
@@ -874,7 +874,7 @@ switch ($_GET['action']) {
 
 
 		</td>
-		<td><a href='#' onclick='myCloseDialog(""); return false' class='cancel-button'><?php echo _("Close");?></a></td>
+		<td><a href='javascript:void(0)' onclick='myCloseDialog(""); return false' class='cancel-button'><?php echo _("Close");?></a></td>
 		</tr>
 		</table>
 		</div>
