@@ -150,7 +150,7 @@ Date.format = '<?php echo return_datepicker_date_format(); ?>';
 
 <?php if ($user->isAdmin() || $user->canEdit()){ ?>
 <!--    <a href='ajax_forms.php?action=getNewResourceForm&height=503&width=775&resourceID=&modal=true' class='thickbox' id='newResource' title="<?php echo _("New Resource"); ?>"> -->
-        <a href= 'javascript:void(0)' onclick='javascript:myDialog("ajax_forms.php?action=getNewResourceForm&height=",503,775)' class='thickbox' id='newResource' title="<?php echo _("New Resource"); ?>"> 
+        <a href= 'javascript:void(0)' onclick='javascript:myDialog("ajax_forms.php?action=getNewResourceForm&height=",1000,1000)' class='thickbox' id='newResource' title="<?php echo _("New Resource"); ?>"> 
         <div class="main-menu-link">
             <img src="images/menu/icon-plus-square.png" />
             <span><?php echo _("New Resource");?></span>
