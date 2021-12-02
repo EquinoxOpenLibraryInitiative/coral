@@ -60,8 +60,7 @@ $target = getTarget();
 <script type="text/javascript" src="../js/plugins/datejs-patched-for-i18n.js"></script>
 <script type="text/javascript" src="../js/plugins/jquery.datePicker-patched-for-i18n.js"></script>
 <script type="text/javascript" src="../js/common.js"></script>
-<!-- <script type="text/javascript" src="js/common.js"></script> -->
-<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="js/common.js"></script> 
 
 <?php
 if (isset($customJSInclude)) {
