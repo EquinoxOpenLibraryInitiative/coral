@@ -57,12 +57,12 @@ $(document).ready(function(){
         updateEbscoKbConfigTable();
     });
 
-    $("#ebscoKbConfig").live('submit', function(e){
+    $("#ebscoKbConfig").on('submit', function(e){
         e.preventDefault();
         submitEbscoKbData();
     });
 
-    $('.removeData').live('click', function () {
+    $('.removeData').on('click', function () {
         deleteData($(this).attr("cn"), $(this).attr("id"));
     });
 
