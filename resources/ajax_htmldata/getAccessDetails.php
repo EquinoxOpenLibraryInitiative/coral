@@ -34,7 +34,7 @@
 
 
 			<?php if ($user->canEdit()){ ?>
-				<span style='float:right;vertical-align:bottom;'><a href='ajax_forms.php?action=getAccessForm&height=394&width=640&modal=true&resourceID=<?php echo $resourceID; ?>&resourceAcquisitionID=<?php echo $resourceAcquisitionID; ?>' class='thickbox' id='editAccess'><img src='images/edit.gif' alt='<?php echo _("edit");?>' title='<?php echo _("edit resource");?>'></a></span>
+				<span style='float:right;vertical-align:bottom;'><a href='javascript:void(0)' onclick='javascript:myDialog("ajax_forms.php?action=getAccessForm&resourceID=<?php echo $resourceID; ?>&resourceAcquisitionID=<?php echo $resourceAcquisitionID; ?>",500,800)' class='thickbox' id='editAccess'><img src='images/edit.gif' alt='<?php echo _("edit");?>' title='<?php echo _("edit resource");?>'></a></span>
 			<?php } ?>
 
 			</th>
@@ -158,11 +158,11 @@
 		?>
 			<table class='linedFormTable'>
 				<tr>
-				 <th><?php echo _("Additional Notes");?></th>
+				 ght=233&width=410<th><?php echo _("Additional Notes");?></th>
 				<th>
 
 				<?php if ($user->canEdit()){?>
-				<a href='ajax_forms.php?action=getNoteForm&height=233&width=410&tab=Access&entityID=<?php echo $resourceAcquisitionID; ?>&resourceNoteID=&modal=true' class='thickbox'><?php echo "<div class= 'addIconTab'><img id='Add' class='addIcon' src='images/plus.gif' title= '"._("Add")."' /></div>";?></a>
+			 <a href='ajax_forms.php?action=getNoteForm&height=233&width=410&tab=Access&entityID=<?php echo $resourceAcquisitionID; ?>&resourceNoteID=&modal=true' class='thickbox'><?php echo "<div class= 'addIconTab'><img id='Add' class='addIcon' src='images/plus.gif' title= '"._("Add")."' /></div>";?></a> 
 				<?php }?>
 				</th>
 				</tr>
