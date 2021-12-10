@@ -42,7 +42,7 @@
 					}
 
 					if ($user->canEdit() && ($archiveInd != 1) && ($showArchivesInd != 1)){ ?>
-						<a href='ajax_forms.php?action=getContactForm&height=389&width=620&modal=true&type=named&resourceID=<?php echo $resourceID; ?>&resourceAcquisitionID=<?php echo $resourceAcquisitionID; ?>' class='thickbox' id='newNamedContact'><?php echo _("add contact");?></a>
+						<a href='javascript:void(0)' onclick='javascript:myDialog("ajax_forms.php?action=getContactForm&type=named&resourceID=<?php echo $resourceID; ?>&resourceAcquisitionID=<?php echo $resourceAcquisitionID; ?>",400,700)' class='thickbox' id='newNamedContact'><?php echo _("add contact");?></a>
 						<br /><br /><br />
 					<?php
 					}
@@ -186,7 +186,7 @@
 
 
 			if ($user->canEdit() && ($orgContactFlag == 0) && ($showArchivesInd != 1)){ ?>
-				<a href='ajax_forms.php?action=getContactForm&height=389&width=620&modal=true&type=named&resourceAcquisitionID=<?php echo $resourceAcquisitionID; ?>' class='thickbox' id='newNamedContact'><?php echo _("add contact");?></a>
+				<a href='javascript:void(0)' onclick='javascript:myDialog("ajax_forms.php?action=getContactForm&type=named&resourceAcquisitionID=<?php echo $resourceAcquisitionID; ?>", 400, 700)' class='thickbox' id='newNamedContact'><?php echo _("add contact");?></a>
 				<br /><br /><br />
 			<?php
 			}
@@ -196,7 +196,7 @@
 			if (($archiveInd != 1) && ($showArchivesInd != 1)){
 				echo "<i>"._("No contacts available")."</i><br /><br />";
 				if (($user->canEdit())){ ?>
-					<a href='ajax_forms.php?action=getContactForm&height=389&width=620&modal=true&type=named&resourceAcquisitionID=<?php echo $resourceAcquisitionID; ?>' class='thickbox' id='newNamedContact'><?php echo _("add contact");?></a>
+					<a href='javascript:void(0)' onclick='javascript:myDialog("ajax_forms.php?action=getContactForm&type=named&resourceAcquisitionID=<?php echo $resourceAcquisitionID; ?>",400,700)' class='thickbox' id='newNamedContact'><?php echo _("add contact");?></a>
 					<br /><br /><br />
 				<?php
 				}
