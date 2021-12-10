@@ -332,7 +332,7 @@ function myDialog(loadForm, h,w){
         });
 }
 
-function myCloseDialog(formName){
+function myCloseDialog(){
         //$(this).dialog('close')
 //$(this).closest('.ui-dialog-content').dialog('close');
 //      $(formName).dialog( "close" )
