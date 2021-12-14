@@ -242,9 +242,8 @@ function submitOrderForm(){
                         location.search = newLoc;
 
                     } else {
-                        kill();
-                        window.parent.tb_remove();
-                        window.parent.updateOrders();
+                        myDialogPOST();
+			window.parent.updateOrders();
                         window.parent.updateRightPanel();
                         return false;
                     }

@@ -205,8 +205,7 @@ function submitDetailSubject(){
 					$("#span_errors").html(html);
 					$("#submitDetailSubjectForm").removeAttr("disabled");
 				}else{
-					kill();
-					window.parent.tb_remove();
+					myDialogPOST();
 					window.parent.updateSubjectsTable();
 					return false;
 				}

@@ -110,8 +110,8 @@ function updateResourceStep(){
                 if (html){
                     $("#span_errors").html(html);
                 }else{
-                    tb_remove();
-                    window.parent.updateWorkflow();
+                    myCloseDialog();	
+		    window.parent.updateWorkflow();
                     //eval("window.parent.update" + $("#tab").val() + "();");
                     return false;
                 }

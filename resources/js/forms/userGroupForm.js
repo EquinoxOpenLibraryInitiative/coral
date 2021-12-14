@@ -196,8 +196,7 @@ function submitUserGroup(){
 					$("#span_errors").html(html);
 					$("#submitUserGroupForm").removeAttr("disabled");
 				}else{
-					kill();
-					window.parent.tb_remove();
+					myDialogPOST();
 					window.parent.updateWorkflowTable();
 					return false;
 				}

@@ -108,8 +108,7 @@ function submitLicenseForm(){
 				$("#span_errors").html(html);
 				$("#submitLicense").removeAttr("disabled");
 			}else{
-				kill();
-				window.parent.tb_remove();
+				myDialogPOST();
 				window.parent.updateAcquisitions();
 				return false;
 			}

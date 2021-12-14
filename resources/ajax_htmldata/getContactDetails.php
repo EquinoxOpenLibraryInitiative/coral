@@ -67,7 +67,7 @@
 				<span style='float:right;vertical-align:top;'>
 				<?php
 					if (($user->canEdit()) && (!isset($contact['organizationName']))){
-						echo "<a href='ajax_forms.php?action=getContactForm&height=389&width=620&modal=true&type=named&resourceID=" . $resourceID . "&contactID=" . $contact['contactID'] . "' class='thickbox'><img src='images/edit.gif' alt='"._("edit")."' title='"._("edit contact")."'></a>";
+						echo "<a href='javascript:void(0);' onclick='javascript:myDialog(\"ajax_forms.php?action=getContactForm&type=named&resourceID=" . $resourceID . "&contactID=" . $contact['contactID'] . "\",400,800)'  class='thickbox'><img src='images/edit.gif' alt='"._("edit")."' title='"._("edit contact")."'></a>";
 						echo "&nbsp;&nbsp;<a href='javascript:void(0)' class='removeContact' id='" . $contact['contactID'] . "'><img src='images/cross.gif' alt='"._("remove note")."' title='"._("remove contact")."'></a>";
 					}else{
 						echo "&nbsp;";
