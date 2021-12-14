@@ -158,7 +158,7 @@
 		?>
 			<table class='linedFormTable'>
 				<tr>
-				 ght=233&width=410<th><?php echo _("Additional Notes");?></th>
+				 <th><?php echo _("Additional Notes");?></th>
 				<th>
 
 				<?php if ($user->canEdit()){?>

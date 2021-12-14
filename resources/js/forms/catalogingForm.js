@@ -13,8 +13,8 @@ function submitCataloging(){
 				$("#span_errors").html(html);
 				$("#submitCatalogingChanges").removeAttr("disabled");
 			}else{
-				kill();
-				window.parent.tb_remove();
+			
+				myDialogPOST();
 				window.parent.updateCataloging();
 			}
 		}

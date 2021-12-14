@@ -303,12 +303,12 @@ function submitResource(status){
 				//go to the new resource page if this was submitted
 				if (status == 'progress') {
 					window.parent.location=("resource.php?ref=new&resourceID=" + resourceID);
-					tb_remove();
+					myCloseDialog();
 					return false;
 				//otherwise go to queue
 				} else {
 					window.parent.location=("queue.php?ref=new");
-					tb_remove();
+					myCloseDialog();
 					return false;
 
 				}

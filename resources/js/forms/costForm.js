@@ -293,8 +293,7 @@ function submitCostForm()
 					$("#span_errors").html(html);
 					$("#submitCost").removeAttr("disabled");
 				} else {
-					kill();
-					window.parent.tb_remove();
+					myDialogPOST();
 					window.parent.updateAcquisitions();
 					return false;
 				}
