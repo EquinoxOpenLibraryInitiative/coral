@@ -427,8 +427,7 @@ function submitWorkflow(){
 					$("#span_errors").html(html);
 					$("#submitWorkflowForm").removeAttr("disabled");
 				}else{
-					kill();
-					window.parent.tb_remove();
+					myDialogPOST();
 					window.parent.updateWorkflowTable();
 					return false;
 				}

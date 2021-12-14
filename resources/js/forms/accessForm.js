@@ -133,8 +133,7 @@ function submitAccess(){
 				$("#span_errors").html(html);
 				$("#submitAccessChanges").removeAttr("disabled");
 			}else{
-				kill();
-				window.parent.tb_remove();
+				myDialogPOST();
 				window.parent.updateAccess();
 				window.parent.updateRightPanel();
 				return false;

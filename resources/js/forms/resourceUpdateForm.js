@@ -471,9 +471,8 @@ function submitProductForm(){
                     $("#span_errors").html(html);
                     $("#submitProductChanges").removeAttr("disabled");
                 }else{
-                    kill();
-                    window.parent.tb_remove();
-                    window.parent.updateProduct();
+                    myDialogPOST();
+		    window.parent.updateProduct();
                     window.parent.updateRightPanel();
                     window.parent.updateTitle();
                     return false;

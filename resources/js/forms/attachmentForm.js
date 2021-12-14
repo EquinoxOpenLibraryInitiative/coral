@@ -184,7 +184,7 @@ function submitAttachment(){
 						$("#span_errors").html(html);
 						$("#submitAttachment").removeAttr("disabled");
 					}else{
-						window.parent.tb_remove();
+						myCloseDialog();
 						window.parent.updateAttachments();
 						window.parent.updateAttachmentsNumber();
 						return false;

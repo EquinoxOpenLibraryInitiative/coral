@@ -339,7 +339,7 @@ function myCloseDialog(){
      $('.ui-dialog-content').dialog('destroy');
 }
 
-function myDialogPOST(ajaxcall){
+function myDialogPOST(){
      return setTimeout(function(){$('.ui-dialog-content').dialog('destroy')},0);
 /*
         $.ajax({

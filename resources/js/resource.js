@@ -565,7 +565,7 @@ function submitNewIssue() {
 			data:       $("#newIssueForm").serialize(),
 			success:    function(res) {
 				updateIssues();
-				tb_remove()
+				myDialogPOST();
 			}
 		});
 	}
@@ -582,7 +582,7 @@ function submitNewDowntime() {
 		 data:       data,
 		 success:    function(res) {
 			updateIssues();
-			tb_remove()
+			myDialogPOST();
 		 }
 
 
@@ -600,7 +600,7 @@ function submitUpdatedDowntime() {
 		 data:       data,
 		 success:    function(res) {
 			updateIssues();
-			tb_remove()
+			myDialogPOST();
 		 }
 
 
@@ -646,7 +646,7 @@ function submitCloseIssue() {
 			if (html.length > 1) {
 				$("#submitCloseIssue").removeAttr("disabled");
 			} else {
-				tb_remove();
+				myDialogPOST();
 				updateIssues();
 				return false;
 			}
